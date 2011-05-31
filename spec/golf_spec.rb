@@ -75,7 +75,6 @@ describe "Golf" do
     end
   end
 
-
   describe ".hole6" do
     it "should play fizzbuzz to 3, where multiples of 3 are 'fizz'" do
       Golf.hole6(3).should eql [1,2,"fizz"]
@@ -93,17 +92,6 @@ describe "Golf" do
       Golf.hole6(30).should eql [1,2,"fizz",4,"buzz","fizz",7,8,"fizz","buzz",11,"fizz",13,14,"fizzbuzz",16,17,"fizz",19,"buzz","fizz",22,23,"fizz","buzz",26,"fizz",28,29,"fizzbuzz"]
     end
   end
-
-  describe ".hole7" do
-    it "should collapse consecutive numbers to a range" do
-      Golf.hole7([1,2,3]).should eql ["1-3"]
-    end
-
-    it "should keep separate ranges distinct" do
-      Golf.hole7([1,2,3,5,6,7,100,101]).should eql ["1-3","5-7","100-101"]
-    end
-  end
-
 
   describe ".hole7" do
     it "should collapse consecutive numbers to a range" do
@@ -152,7 +140,6 @@ describe "Golf" do
       Golf.hole9('fixtures/av-example4.txt').should eql "blue"
     end
   end
-
 
 end
 
