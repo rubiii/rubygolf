@@ -5,7 +5,7 @@ class Golf
     'p.inject :*',
     'p.split.sort_by {|p| p[1]}.join " "',
     'hole1 1..p',
-    %q{p.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/(dog.*)\)/,'\1(bone))').sub(/cat/,'dead') }},
+    %q{p.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/(dog.*)\)/,'\1(bone))').sub /cat/,'dead' }},
     '(1..4).map{|i| p.each_cons(i).to_a}.inject :+',
     '(1..p).map{ |i|
         s="fizz" if i % 3 == 0
@@ -19,7 +19,7 @@ class Golf
     "b = [1,1]
       (2..p-1).map {|i| b << b[-2] + b[-1] }
       b",
-    "r = open(p).map{|l| l.strip.split(', ')}
+    "r = open(p).map{|l| l.strip.split ', ' }
       t = r.size/2.0
       loop {
         h = Hash.new(0)
